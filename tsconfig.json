@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "lib": ["es5", "es6"],
         "target": "ES2015",
         "module": "commonjs",
         "sourceMap": true,
@@ -7,6 +8,7 @@
         "rootDir": "./src",
         "removeComments": true,
         "strict": true,
+        "strictPropertyInitialization": false,
         "moduleResolution": "node",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
