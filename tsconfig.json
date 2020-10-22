@@ -12,7 +12,12 @@
         "moduleResolution": "node",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"],
+            "@config/*": ["./src/config/*"]
+        }
     },
     "include": ["src/**/*.ts"],
     "exclude": ["node_modules"]
