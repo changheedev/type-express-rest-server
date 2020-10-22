@@ -14,5 +14,4 @@ module.exports = {
     dropSchema: isTest ? true : false,
     synchronize: !isProd ? true : false,
     logging: !isProd ? true : false,
-    entities: isProd ? ['dist/entity/**/*.js'] : ['src/entity/**/*.ts'],
 };

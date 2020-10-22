@@ -1,7 +1,9 @@
+import 'reflect-metadata';
 import * as express from 'express';
 import * as logger from 'morgan';
-import { SnakeNamingStrategy } from './config/orm/snake-naming-strategy';
+import { SnakeNamingStrategy } from '@config/orm/snake-naming-strategy';
 import { createConnection, getConnectionOptions } from 'typeorm';
+import { User } from '@/models/user';
 
 const app: express.Application = express();
 
@@ -11,6 +13,7 @@ const connectDatabase = async () => {
         await createConnection(
             Object.assign(connectionOptions, {
                 namingStrategy: new SnakeNamingStrategy(),
+                entities: [User],
             }),
         );
         console.log('DB connection success');
