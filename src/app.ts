@@ -3,7 +3,7 @@ import * as express from 'express';
 import * as logger from 'morgan';
 import { SnakeNamingStrategy } from '@config/orm/snake-naming-strategy';
 import { createConnection, getConnectionOptions } from 'typeorm';
-import { User } from '@/models/user';
+import { User } from '@models/user';
 
 const app: express.Application = express();
 
