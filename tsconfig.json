@@ -1,21 +1,21 @@
 {
-    "compilerOptions": {
-        "lib": ["es5", "es6"],
-        "target": "ES2015",
-        "module": "commonjs",
-        "sourceMap": true,
-        "strict": true,
-        "strictPropertyInitialization": false,
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
-        "forceConsistentCasingInFileNames": true,
-        "baseUrl": ".",
-        "paths": {
-            "@/*": ["./src/*"],
-            "@config/*": ["./src/config/*"],
-            "@models/*": ["./src/models/*"]
-        }
-    },
-    "include": ["src/**/*.ts"],
-    "exclude": ["node_modules"]
+  "compilerOptions": {
+    "lib": ["es5", "es6"],
+    "target": "ES2015",
+    "module": "commonjs",
+    "sourceMap": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@config/*": ["./src/config/*"],
+      "@models/*": ["./src/models/*"]
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }

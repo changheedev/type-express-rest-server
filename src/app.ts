@@ -1,31 +1,31 @@
 import 'reflect-metadata';
 import * as express from 'express';
 import * as logger from 'morgan';
-import { SnakeNamingStrategy } from '@config/orm/snake-naming-strategy';
+import SnakeNamingStrategy from '@config/orm/snake-naming-strategy';
 import { createConnection, getConnectionOptions } from 'typeorm';
 import { User } from '@models/user';
 
 const app: express.Application = express();
 
 const connectDatabase = async () => {
-    try {
-        const connectionOptions = await getConnectionOptions();
-        await createConnection(
-            Object.assign(connectionOptions, {
-                namingStrategy: new SnakeNamingStrategy(),
-                entities: [User],
-            }),
-        );
-        console.log('DB connection success');
-    } catch (error) {
-        console.error(error);
-    }
+  try {
+    const connectionOptions = await getConnectionOptions();
+    await createConnection(
+      Object.assign(connectionOptions, {
+        namingStrategy: new SnakeNamingStrategy(),
+        entities: [User],
+      }),
+    );
+    console.log('DB connection success');
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 const setMiddlewares = () => {
-    app.use(logger('dev'));
-    app.use(express.json());
-    app.use(express.urlencoded({ extended: false }));
+  app.use(logger('dev'));
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: false }));
 };
 
 connectDatabase();
